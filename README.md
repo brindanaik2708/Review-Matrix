@@ -31,8 +31,6 @@ weighted trust analysis, explainable recommendations, and structured review work
 
 ---
 
----
-
 ## Overview
 
 Review Matrix helps developers review AI-generated pull requests using deterministic risk analysis, explainable recommendations, weighted trust tracking, and structured review decisions.
@@ -144,21 +142,6 @@ lib/
 tests/
 public/
 ```
-
----
-
-## Optional AI Enhancement
-
-Review Matrix works completely offline.
-
-If configured with:
-
-```env
-OPENAI_API_KEY=
-OPENAI_MODEL=
-```
-
-the application can improve explanation text while keeping deterministic risk scoring unchanged.
 
 ---
 
