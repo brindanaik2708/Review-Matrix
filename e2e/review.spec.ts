@@ -1,0 +1,2 @@
+import { test, expect } from "@playwright/test";
+test("renders review hunks and updates summary when approving", async ({ page }) => { await page.goto("/"); await expect(page.getByText("auth-01")).toBeVisible(); await expect(page.getByText("Trust Ledger")).toBeVisible(); await page.getByRole("button", { name: "Approve auth-01" }).click(); await expect(page.getByLabel("Review summary")).toContainText("Approved1"); });

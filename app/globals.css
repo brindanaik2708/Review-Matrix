@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+:root { --ink: #17202a; --paper: #f8f8f5; --blue: #2563eb; --line: #d8d9d3; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+button, input { font: inherit; }
+button:focus-visible, input:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; }
