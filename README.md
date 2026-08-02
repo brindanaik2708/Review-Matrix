@@ -1,31 +1,42 @@
 # 🚀 Review Matrix
 
-> **AI-Powered Pull Request Risk Intelligence**
+<p align="center">
+  <b>AI-Powered Pull Request Risk Intelligence</b><br>
+  Deterministic AI-assisted code review with explainable risk scoring, trust tracking, and structured reviewer workflows.
+</p>
 
-Review Matrix is an AI-assisted pull request review platform that helps developers review AI-generated code using deterministic risk scoring, explainable recommendations, weighted trust tracking, and structured review workflows.
-
-**🌐 Live Demo:** https://review-matrix.vercel.app
-
-**💻 GitHub:** https://github.com/brindanaik2708/Review-Matrix
-
----
-
-## ✨ Features
-
-- 🔍 Deterministic Risk Scoring
-- 🤖 AI Fix Suggestions
-- 📊 Live Risk Distribution Dashboard
-- 🔎 Search & Filter PR Hunks
-- ✅ Approve • Redirect • Request Changes
-- 📈 Weighted Trust Ledger
-- 📂 Review History
-- 📤 JSON Export
-- 🌙 Dark / ☀ Light Theme
-- 📱 Responsive & Accessible UI
+<p align="center">
+  <a href="https://review-matrix.vercel.app"><b>🌐 Live Demo</b></a> •
+  <a href="https://github.com/brindanaik2708/Review-Matrix"><b>💻 GitHub</b></a>
+</p>
 
 ---
 
-## 🏗 Architecture
+## Overview
+
+Review Matrix helps developers review AI-generated pull requests using deterministic risk analysis, explainable recommendations, weighted trust tracking, and structured review decisions.
+
+Unlike traditional PR review tools, Review Matrix focuses on **trust**, **transparency**, and **human-in-the-loop decision making**.
+
+---
+
+## Key Features
+
+| Feature | Description |
+|---------|-------------|
+| 🔍 Deterministic Risk Engine | Classifies every PR hunk using rule-based analysis |
+| 🤖 AI Fix Suggestions | Shows deterministic fixes with example code |
+| 📊 Risk Dashboard | Live risk distribution and review metrics |
+| 🔎 Smart Search & Filters | Instantly locate risky files and hunks |
+| ✅ Review Workflow | Approve, Redirect, or Request Changes |
+| 📈 Trust Ledger | Weighted trust score from historical reviews |
+| 📂 Review History | Stores exported reviews locally |
+| 📤 JSON Export | Export complete review decisions |
+| 🌙 Theme Support | Dark & Light mode with persistence |
+
+---
+
+## Architecture
 
 ```mermaid
 flowchart TD
@@ -47,42 +58,22 @@ F --> H[Review History]
 
 ---
 
-## 🧠 How It Works
-
-```text
-GitHub PR
-      │
-      ▼
-Review Matrix
-      │
-      ├── Risk Analysis
-      ├── Trust Calculation
-      ├── Suggested Fixes
-      ├── Reviewer Decisions
-      ▼
-Dashboard
-      ▼
-JSON Export
-```
-
----
-
-## 📊 Risk Categories
+## Risk Categories
 
 | Category | Purpose |
 |----------|---------|
-| 🔐 Authentication | Login, JWT, OAuth |
-| 🗄 Database | Queries & Schema |
-| 🔑 Secrets | API Keys & Tokens |
-| 📦 Dependencies | Package Security |
-| 🧠 Logic | Business Logic |
-| ⚡ Performance | Expensive Operations |
-| 🔄 Migration | Schema Changes |
-| 👤 PII | Sensitive User Data |
+| Authentication | Login, OAuth, JWT |
+| Database | Queries & Schema |
+| Secrets | API Keys & Tokens |
+| Dependencies | Package Security |
+| Logic | Business Rules |
+| Performance | Expensive Operations |
+| Migration | Database Changes |
+| PII | Sensitive User Information |
 
 ---
 
-## ⚙ Tech Stack
+## Technology Stack
 
 | Layer | Technology |
 |--------|------------|
@@ -95,15 +86,12 @@ JSON Export
 
 ---
 
-## 🚀 Local Setup
+## Local Setup
 
 ```bash
 git clone https://github.com/brindanaik2708/Review-Matrix.git
-
 cd Review-Matrix
-
 npm install
-
 npm run dev
 ```
 
@@ -115,19 +103,17 @@ http://localhost:3000
 
 ---
 
-## 🧪 Validation
+## Validation
 
 ```bash
 npm test
-
 npm run typecheck
-
 npm run build
 ```
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 app/
@@ -140,49 +126,42 @@ public/
 
 ---
 
-## 🔐 Optional AI Mode
+## Optional AI Enhancement
 
-Review Matrix works **without any API key**.
+Review Matrix works completely offline.
 
-Optionally configure:
+If configured with:
 
 ```env
 OPENAI_API_KEY=
 OPENAI_MODEL=
 ```
 
-to improve explanation text while keeping deterministic risk scoring unchanged.
+the application can improve explanation text while keeping deterministic risk scoring unchanged.
 
 ---
 
-## 🎯 Why Review Matrix?
+## Why Review Matrix?
 
-✔ Explainable AI
-
-✔ Deterministic Risk Engine
-
-✔ Weighted Trust Ledger
-
-✔ AI Fix Suggestions
-
-✔ Interactive Review Workflow
-
-✔ JSON Export
-
-✔ Production Ready
+- Explainable AI
+- Deterministic Risk Analysis
+- Weighted Trust Ledger
+- AI Fix Suggestions
+- Interactive Review Workflow
+- JSON Export
+- Production Ready
+- Mobile Responsive
 
 ---
 
-## 👩‍💻 Developer
+## Developer
 
-**Brinda Naik**
-
-B.Tech Computer Engineering
-
+**Brinda Naik**  
+B.Tech Computer Engineering  
 Sarvajanik College of Engineering & Technology
 
 ---
 
-## 📄 License
+## License
 
 MIT License
