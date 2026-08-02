@@ -1,4 +1,4 @@
 [
-  { "runId": "run-104", "predictions": [{ "hunkId": "auth-legacy", "predictedRisk": "high", "outcome": "incident" }, { "hunkId": "format-1", "predictedRisk": "low", "outcome": "clean" }, { "hunkId": "query-1", "predictedRisk": "high", "outcome": "reverted" }] },
-  { "runId": "run-103", "predictions": [{ "hunkId": "config-1", "predictedRisk": "medium", "outcome": "clean" }, { "hunkId": "logic-legacy", "predictedRisk": "medium", "outcome": "reverted" }, { "hunkId": "typo-1", "predictedRisk": "low", "outcome": "clean" }] }
+  { "runId": "run-104", "completedAt": "2026-08-02T07:00:00.000Z", "predictions": [{ "hunkId": "auth-legacy", "predictedRisk": "high", "outcome": "incident" }, { "hunkId": "format-1", "predictedRisk": "low", "outcome": "clean" }, { "hunkId": "query-1", "predictedRisk": "high", "outcome": "reverted" }] },
+  { "runId": "run-103", "completedAt": "2026-07-28T07:00:00.000Z", "predictions": [{ "hunkId": "config-1", "predictedRisk": "medium", "outcome": "clean" }, { "hunkId": "logic-legacy", "predictedRisk": "medium", "outcome": "reverted" }, { "hunkId": "typo-1", "predictedRisk": "low", "outcome": "clean" }] }
 ]

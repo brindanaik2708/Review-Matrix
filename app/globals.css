@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
-:root { --ink: #17202a; --paper: #f8f8f5; --blue: #2563eb; --line: #d8d9d3; }
+:root { color-scheme: dark; --ink: #eaf4ff; --muted: #91a4bd; --line: rgba(148, 163, 184, .18); --panel: rgba(15, 25, 45, .72); --cyan: #22d3ee; --blue: #3b82f6; }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
-button, input { font: inherit; }
-button:focus-visible, input:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
-pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+html { background: #07111f; }
+body { min-height: 100vh; margin: 0; color: var(--ink); background: radial-gradient(circle at 15% 0%, #113a63 0, transparent 28rem), radial-gradient(circle at 95% 20%, #15305a 0, transparent 31rem), #07111f; font-family: Arial, Helvetica, sans-serif; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+::selection { background: #0e7490; color: white; }
+.glass { border: 1px solid var(--line); background: var(--panel); box-shadow: 0 20px 60px rgba(0, 0, 0, .24); backdrop-filter: blur(18px); }
+.lift { transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.lift:hover { transform: translateY(-2px); border-color: rgba(34, 211, 238, .45); box-shadow: 0 16px 45px rgba(0, 0, 0, .35); }

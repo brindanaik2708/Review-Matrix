@@ -1,12 +1,15 @@
 import type { Category, RiskAssessment, RiskLevel } from "./types";
 
-const base: Record<Category, number> = { auth: 68, db: 61, secrets: 82, deps: 45, logic: 42 };
+const base: Record<Category, number> = { auth: 68, db: 61, secrets: 82, deps: 45, logic: 42, performance: 52, migration: 72, pii: 76 };
 const signals: Array<[RegExp, number, string]> = [
   [/deleteMany|drop table|truncate/i, 28, "broad destructive database operation"],
   [/sk_live|api[_-]?key|secret/i, 18, "secret-like value in the patch"],
   [/isAdmin|unauthorized|bypass|session/i, 16, "authorization boundary change"],
   [/latest|\^\d|\*/i, 10, "unbounded dependency version"],
-  [/\+ pct|\* 0|return true|=== false/i, 12, "potentially inverted business logic"]
+  [/\+ pct|\* 0|return true|=== false/i, 12, "potentially inverted business logic"],
+  [/forEach\(async|select \*|n\+1|while \(true\)|\.map\(async/i, 16, "potentially expensive execution pattern"],
+  [/alter table|drop column|rename column|migration/i, 17, "schema migration with rollout risk"],
+  [/email|phone|ssn|dateOfBirth|address/i, 16, "personally identifiable information exposure"]
 ];
 
 export function riskLevel(score: number): RiskLevel {
