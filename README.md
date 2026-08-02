@@ -1,66 +1,318 @@
-# Review Matrix
+# 🚀 Review Matrix
+### AI-Powered Pull Request Risk Intelligence
 
-Review Matrix is **AI-Powered Pull Request Risk Intelligence**: a mobile-first, per-hunk review matrix for AI-authored pull requests. It turns an opaque agent diff into small, accountable decisions: approve, redirect, request changes, or leave a review note. The demo is fully local and deterministic.
+Review Matrix is an AI-assisted Pull Request review platform that helps developers evaluate AI-generated code changes through deterministic risk scoring, explainable recommendations, weighted trust tracking, and structured review workflows.
 
-## Prerequisites
+Built for the **Agentic Applications UX Track**, Review Matrix focuses on making AI-assisted code review transparent, explainable, and trustworthy.
 
-- Node.js 20.9 or newer and npm.
-- **Demo mode:** no login and no API key required.
-- **Live mode (optional):** `OPENAI_API_KEY` can sharpen explanation wording and `GITHUB_TOKEN` can load a GitHub PR. Neither changes deterministic risk scores. `OPENAI_MODEL` is optional.
+---
 
-## Run locally
+## 🌐 Live Demo
+
+**Live Application:** https://review-matrix.vercel.app
+
+**GitHub Repository:** https://github.com/brindanaik2708/Review-Matrix
+
+---
+
+# 📌 Problem Statement
+
+As AI coding assistants become more common, developers receive increasingly large AI-generated Pull Requests.
+
+Reviewing these PRs is difficult because reviewers need to:
+
+- identify risky code quickly
+- understand why it is risky
+- decide whether AI can be trusted
+- maintain consistent review quality
+
+Existing review tools focus primarily on static analysis rather than reviewer decision support.
+
+---
+
+# 💡 Solution
+
+Review Matrix provides an interactive review experience where every code hunk is automatically evaluated using deterministic risk analysis.
+
+Instead of replacing developers, Review Matrix augments reviewers by providing:
+
+- explainable risk scores
+- deterministic review logic
+- AI fix suggestions
+- trust history
+- structured reviewer decisions
+- portable JSON review reports
+
+---
+
+# ✨ Features
+
+## 🔍 Deterministic Risk Engine
+
+Every code hunk is categorized into risk groups including:
+
+- Authentication
+- Database
+- Secrets
+- Dependencies
+- Logic
+- Performance
+- Migration
+- Personally Identifiable Information (PII)
+
+Risk scores remain deterministic for identical inputs.
+
+---
+
+## 🧠 AI Fix Suggestions
+
+Every medium/high risk hunk provides:
+
+- Problem
+- Why it matters
+- Suggested Fix
+- Example implementation
+
+These suggestions are deterministic and require no LLM.
+
+---
+
+## 📊 Risk Distribution Dashboard
+
+Interactive dashboard displaying:
+
+- High Risk
+- Medium Risk
+- Low Risk
+
+Live updates while reviewing.
+
+---
+
+## 🔎 Search & Filter
+
+Instant filtering by
+
+- filename
+- path
+- review state
+- risk level
+
+No page refresh required.
+
+---
+
+## ✅ Review Workflow
+
+Each hunk supports:
+
+- Approve
+- Redirect
+- Request Changes
+
+Review summary updates instantly.
+
+---
+
+## 📈 Trust Ledger
+
+Review Matrix computes a weighted trust score using previous AI review history.
+
+More recent reviews receive greater weight, creating a more realistic trust metric.
+
+---
+
+## 📂 Review History
+
+Exported reviews are automatically stored locally.
+
+History includes:
+
+- Trust Score
+- Review Date
+- Decision Summary
+- Reviewed Hunks
+
+---
+
+## 🌗 Theme Support
+
+- Dark Mode
+- Light Mode
+- System Preference Detection
+- Persistent Theme Selection
+
+---
+
+## 📤 JSON Export
+
+Entire review sessions can be exported as structured JSON for auditing and future analysis.
+
+---
+
+# 🏗️ System Architecture
+
+```text
+                   ┌──────────────────────────┐
+                   │     GitHub Pull Request  │
+                   └──────────────┬───────────┘
+                                  │
+                                  ▼
+                  ┌────────────────────────────────┐
+                  │        Review Matrix UI         │
+                  │                                │
+                  │  Dashboard • Search • Filters  │
+                  └──────────────┬─────────────────┘
+                                 │
+          ┌──────────────────────┼──────────────────────┐
+          │                      │                      │
+          ▼                      ▼                      ▼
+ ┌────────────────┐    ┌────────────────┐    ┌────────────────┐
+ │ Risk Engine    │    │ Trust Ledger   │    │ Review Engine  │
+ │                │    │                │    │                │
+ │ Deterministic  │    │ Weighted Trust │    │ Approve        │
+ │ Risk Analysis  │    │ Score          │    │ Redirect       │
+ │ Category Rules │    │ Accuracy       │    │ Request Change │
+ └────────┬───────┘    └────────┬───────┘    └────────┬───────┘
+          │                     │                     │
+          └──────────────┬──────┴──────────────┬──────┘
+                         ▼                     ▼
+               ┌────────────────────────────────────┐
+               │      Review Summary Dashboard       │
+               │                                    │
+               │ Risk Chart                         │
+               │ Suggested Fixes                    │
+               │ JSON Export                        │
+               │ Review History                     │
+               └────────────────────────────────────┘
+```
+
+---
+
+# ⚙️ Technology Stack
+
+| Category | Technology |
+|-----------|------------|
+| Framework | Next.js 15 |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Charts | Recharts |
+| Testing | Vitest |
+| E2E | Playwright |
+| Deployment | Vercel |
+
+---
+
+# 🚀 Local Setup
+
+Clone the repository
+
+```bash
+git clone https://github.com/brindanaik2708/Review-Matrix.git
+```
+
+Install dependencies
 
 ```bash
 npm install
+```
+
+Run
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The bundled PR includes auth, database, secrets, dependency, and logic hunks. It works with no environment variables.
+Open
 
-Quality checks:
+```
+http://localhost:3000
+```
+
+---
+
+# 🧪 Testing
+
+Run unit tests
 
 ```bash
 npm test
-npm run typecheck
-npm run build
-npm run test:e2e
 ```
 
-## Deploy to Vercel in five minutes
+Run type checking
 
-1. Push this directory to a Git repository.
-2. In Vercel, choose **Add New → Project** and import the repository.
-3. Vercel detects Next.js; leave the build settings at their defaults.
-4. Optionally add `OPENAI_API_KEY` and `OPENAI_MODEL` in Project Settings → Environment Variables.
-5. Click **Deploy**. No environment variable is needed for the demo.
+```bash
+npm run typecheck
+```
 
-## How it works
+Build production version
 
-`data/sample-pr.json` is the review input, spanning auth, database, secrets, dependencies, logic, performance, migrations, and PII. `lib/risk.ts` applies documented category, file-path, and diff-keyword heuristics and clamps the result to 100. `data/trust-ledger.json` contains historical predictions. In `lib/trust.ts`, an agreement means low-risk predicts a clean outcome, while medium/high/critical predicts a reverted or incident outcome. Trust is weighted deterministically: last 24 hours ×1.0, last week ×0.8, last month ×0.4, and older ×0.2.
+```bash
+npm run build
+```
 
-Paste a GitHub PR URL to load its files when `GITHUB_TOKEN` is set. Without a token—or if GitHub rejects the request—the dashboard explicitly falls back to the bundled sample. Imported diffs are still scored only by local deterministic rules.
+---
 
-## 5-line demo walkthrough
+# 📁 Project Structure
 
-1. “Review Matrix turns an AI-authored pull request into a clear, risk-ranked review queue.”
-2. “I can filter across security, performance, migration, and PII signals without losing the original diff context.”
-3. “For this migration, I choose Request changes and get a severity, reviewer comment, and suggested fix instantly.”
-4. “The weighted Trust Ledger gives recent agent outcomes more influence than stale history.”
-5. “I can load a GitHub PR when a server token exists, or safely demo the same deterministic engine with bundled data.”
+```
+app/
+components/
+data/
+lib/
+tests/
+public/
+styles/
+```
 
-The optional `/api/explain` endpoint is intentionally score-blind: it only returns alternate reason wording after a key is configured. Keys stay server-side and `.env*` is ignored; copy `.env.example` locally when needed.
+---
 
-## Assumptions
+# 🔐 Optional AI Enhancement
 
-- “Reject” is product language rendered as **Redirect**, signaling a request for the agent to revise rather than merely a negative vote.
-- The supplied sample `riskReason` is a human-friendly fallback; deterministic findings replace it when a strong heuristic matches.
-- Ledger outcomes are simplified: `clean` validates low risk, while `reverted` and `incident` validate elevated risk.
-- The optional AI route is a safe demo seam. Swap its implementation for an approved server-side OpenAI SDK call if live production wording is required; scores must remain unchanged.
+Review Matrix works completely offline.
 
-## How Codex built this
+If configured with:
 
-Codex built a Next.js App Router + TypeScript + Tailwind project, added deterministic domain logic and bundled datasets, then evolved it into a dark, responsive review dashboard. It added category coverage for performance, migration, and PII, weighted trust calculations, structured request-change guidance, and guarded GitHub PR loading. Vitest covers scoring and ledger agreement, with a Playwright smoke test for the main approval interaction. The acceptance commands are tracked in [PLANS.md](PLANS.md).
+```
+OPENAI_API_KEY
+```
 
-## License
+the application can optionally improve explanation text without changing deterministic risk scores.
 
-[MIT](LICENSE)
+---
+
+# 🎯 Why Review Matrix?
+
+Unlike traditional PR review tools, Review Matrix focuses on reviewer confidence rather than only code analysis.
+
+It combines:
+
+✔ Explainable AI
+
+✔ Deterministic Risk Scoring
+
+✔ Weighted Trust Ledger
+
+✔ AI Fix Suggestions
+
+✔ Interactive Review Workflow
+
+✔ Portable JSON Reports
+
+to create a transparent AI-assisted review experience.
+
+---
+
+# 👩‍💻 Developed By
+
+**Brinda Naik**
+
+B.Tech Computer Engineering
+
+Sarvajanik College of Engineering & Technology
+
+---
+
+# 📄 License
+
+MIT License
