@@ -1,14 +1,35 @@
 # 🚀 Review Matrix
 
 <p align="center">
-  <b>AI-Powered Pull Request Risk Intelligence</b><br>
-  Deterministic AI-assisted code review with explainable risk scoring, trust tracking, and structured reviewer workflows.
+<img src="docs/dashboard.png" width="95%">
 </p>
 
 <p align="center">
-  <a href="https://review-matrix.vercel.app"><b>🌐 Live Demo</b></a> •
-  <a href="https://github.com/brindanaik2708/Review-Matrix"><b>💻 GitHub</b></a>
+<b>AI-Powered Pull Request Risk Intelligence</b>
 </p>
+
+<p align="center">
+Review AI-generated pull requests using deterministic risk scoring,
+weighted trust analysis, explainable recommendations, and structured review workflows.
+</p>
+
+<p align="center">
+
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)]()
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)]()
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38BDF8?logo=tailwind-css)]()
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?logo=vercel)]()
+[![MIT](https://img.shields.io/badge/License-MIT-green)]()
+
+</p>
+
+<p align="center">
+<a href="https://review-matrix.vercel.app">🌐 Live Demo</a>
+&nbsp;&nbsp;•&nbsp;&nbsp;
+<a href="https://github.com/brindanaik2708/Review-Matrix">GitHub Repository</a>
+</p>
+
+---
 
 ---
 
